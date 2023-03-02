@@ -1,0 +1,38 @@
+body{
+    background-color: aqua;
+    box-sizing: border-box;
+}
+
+#container-header{
+    width: 100vw;
+}
+
+#container{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#form-container{
+    width: 50vw;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+
+}    
+
+#birthday-button{
+    display: inline-block;
+    padding: 15px 32 px;
+    color: white;
+    border-radius: 8px;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#birthday-container{
+    background-color: azure;
+    width: 50vw;
+    
+}
