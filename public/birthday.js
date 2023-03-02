@@ -29,9 +29,9 @@ function calculateDays(birthday, name){
         birthday.setFullYear(currentYear + 1);
     }
     const diffTime = birthday.getTime() - today.getTime()
-    console.log(diffTime)
     const diffDays = Math.ceil(diffTime / (1000*60*60*24))
     birthdayBody.innerText = `Its ${data} today and there is ${diffDays} days till ${name} birthday`
+    
 }
 
 
