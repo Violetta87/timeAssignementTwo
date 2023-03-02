@@ -100,7 +100,7 @@
 ]
 
         const date = new Date();
-        const today = weekDays[date.getDay()]
+        const weekDayToday = weekDays[date.getDay()]
 
         //get values from input - make a new date with birthdaydate input - so we can compare the two date objects.
         function birthdaySubmit(event){
@@ -125,7 +125,7 @@
             }
             const diffTime = birthday.getTime() - today.getTime()
             const diffDays = Math.ceil(diffTime / (1000*60*60*24))
-            birthdayBody.innerText = `Its ${today} today and there is ${diffDays} days till ${name} birthday`
+            birthdayBody.innerText = `Its ${weekDayToday} today and there is ${diffDays} days till ${name} birthday`
     
         }
     </script>
