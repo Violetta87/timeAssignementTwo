@@ -7,6 +7,13 @@ fetch(url).then(response => response.json()).then(result => {
     console.log(data)
 })
 
+
+let weekDays = [ "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
+]
+
+const date = new Date();
+const today = weekDays[date.getDay()]
+
 //get values from input - make a new date with birthdaydate input - so we can compare the two date objects.
 function birthdaySubmit(event){
     event.preventDefault();
@@ -30,7 +37,7 @@ function calculateDays(birthday, name){
     }
     const diffTime = birthday.getTime() - today.getTime()
     const diffDays = Math.ceil(diffTime / (1000*60*60*24))
-    birthdayBody.innerText = `Its ${data} today and there is ${diffDays} days till ${name} birthday`
+    birthdayBody.innerText = `Its ${today} today and there is ${diffDays} days till ${name} birthday`
     
 }
 
