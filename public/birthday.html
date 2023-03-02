@@ -96,14 +96,11 @@
     </div>
 
     <script>
-        const url = "http://localhost:8080/api/weekDays"
+        let weekDays = [ "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
+]
 
-        //vi fetcher API, får et promise retur, parser json data til javascript object. 
-        fetch(url).then(response => response.json()).then(result => {
-            data = result.data
-            }).then(() => {
-            console.log(data)
-        })
+        const date = new Date();
+        const today = weekDays[date.getDay()]
 
         //get values from input - make a new date with birthdaydate input - so we can compare the two date objects.
         function birthdaySubmit(event){
@@ -128,7 +125,7 @@
             }
             const diffTime = birthday.getTime() - today.getTime()
             const diffDays = Math.ceil(diffTime / (1000*60*60*24))
-            birthdayBody.innerText = `Its ${data} today and there is ${diffDays} days till ${name} birthday`
+            birthdayBody.innerText = `Its ${today} today and there is ${diffDays} days till ${name} birthday`
     
         }
     </script>

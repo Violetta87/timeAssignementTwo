@@ -1,4 +1,4 @@
-/*const url = "http://localhost:8080/api/weekDays"
+const url = "http://localhost:8080/api/weekDays"
 
 //vi fetcher API, får et promise retur, parser json data til javascript object. 
 fetch(url).then(response => response.json()).then(result => {
@@ -6,14 +6,7 @@ fetch(url).then(response => response.json()).then(result => {
 }).then(() => {
     console.log(data)
 })
-*/
 
-
-let weekDays = [ "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
-]
-
-const date = new Date();
-const today = weekDays[date.getDay()]
 
 //get values from input - make a new date with birthdaydate input - so we can compare the two date objects.
 function birthdaySubmit(event){
